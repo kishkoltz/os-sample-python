@@ -1,4 +1,3 @@
-print("WSGI.PY LOADED")
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
@@ -14,5 +13,10 @@ migrate = Migrate(application, db)
 if __name__ == "__main__":
     application.run()
     print("application.run()")
+
+@application.shell_context_processor
+def make_shell_context():
+    return {'db': db, 'Author': Author, "Book":Book}
+
     
-import app.models
+import app.models import Author, Book
