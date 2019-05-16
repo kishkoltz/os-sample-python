@@ -1,5 +1,5 @@
 from flask import request, flash, render_template
-from app import app, db
+from wsgi import application, db
 from app.models import Author, Book
 from app.forms import ImportBooks, AddBook
 import requests, json
