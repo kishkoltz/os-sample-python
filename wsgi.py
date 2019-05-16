@@ -19,4 +19,4 @@ def make_shell_context():
     return {'db': db, 'Author': Author, "Book":Book}
 
     
-import app.models import Author, Book
+from app.models import Author, Book
