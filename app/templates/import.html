@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Import books</h1>
+  <form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.keywords.label }}<br>
+      {{ form.keywords(size=32) }}
+      {{ form.submit }}<br>
+    </p>
+
+  {% if results|length > 0 %}
+    {% for x in results %}
+    <p>
+      <input type="checkbox" name="checkbox" value={{ loop.index0 }}>
+      {{ x.title }} - {{ x.author }} - {{ x.description }}
+    </p>
+    {% endfor %}
+    {{ form.move }}
+  {% endif %}
+  </form>
+
+{% endblock %}

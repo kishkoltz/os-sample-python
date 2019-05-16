@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Add a Book</h1>
+  <form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.author.label }}
+      {{ form.author(size=32) }}<br>
+      {{ form.title.label }}
+      {{ form.title(size=32) }}<br>
+      {{ form.genre.label }}
+      {{ form.genre(size=32) }}<br>
+      {{ form.description.label }}
+      {{ form.description(size=32) }}<br>
+      {{ form.submit }}<br>
+    </p>
+  </form>
+
+{% endblock %}
