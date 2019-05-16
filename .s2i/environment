@@ -1,4 +1,4 @@
 APP_CONFIG=config.py
-FLASK_APP=books.py
+FLASK_APP=wsgi.py
 SQLALCHEMY_TRACK_MODIFICATIONS=False
 OPENSHIFT_DATA_DIR=/opt/app-root/src/data
