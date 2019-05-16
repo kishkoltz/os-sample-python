@@ -1,2 +1,3 @@
 APP_CONFIG=config.py
+FLASK_APP=books.py
 OPENSHIFT_DATA_DIR=/opt/app-root/src/data
